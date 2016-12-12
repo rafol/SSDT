@@ -1,0 +1,58 @@
+===========================================================================
+Stochastic Model for Skin Detection v_1.0 (2013-02-23)
+===========================================================================
+
+Written by 
+Rafael Sachett Medeiros <rsmedeiros@inf.ufrgs.br>
+Jacob Scharcanski		<jacobs@inf.ufrgs.br>
+Alexander Wong			<a28wong@uwaterloo.ca>
+
+===========================================================================
+Content:
+
+This algorithm was introduced in the paper:
+R. S. Medeiros, J. Scharcanski and A. Wong, "Multi-scale stochastic color 
+texture models for skin region segmentation and gesture detection," 2013 
+IEEE International Conference on Multimedia and Expo Workshops (ICMEW).
+===========================================================================
+INSTALLATION:
+
+The matlab codes are a standalone implementation, and no instalation is needed.
+To use the mex (C/C++) implementation of the EM and K-means you must have 
+the EM_MVGM and Yael libraries installed on your computer.
+
+These codes are note mine, but I've indluded them in this repository.
+
+EM_MVGM: https://www.mathworks.com/matlabcentral/fileexchange/20712-em-for-hmm-multivariate-gaussian-processes
+Yael: https://gforge.inria.fr/projects/yael/
+
+===========================================================================
+USAGE:
+
+Run the 'demo_run.m' for segmenting and classifiing the images on the 
+folder "img_test". There will be a training stage to build the skin models 
+based on the images and groundtruths on the "img_train/" folder.
+Run the 'demo_cross.m' for testing cross validation on the images in the 
+"img_test/" folder. 
+
+Output will be saved on the "Results/" folder
+
+===========================================================================
+FILES:
+
+BiSS 		- Multi-scale decomposition library
+demo_run.m	- Train and Classify the test images
+demo_cross.m - Run cross validation testes
+Images		- Some test Images
+README.txt 	- This file
+auxlib		- Some useful matlab functions. 
+skinlib		- skin detection library
+
+===========================================================================
+REFERENCES:
+
+If you use this software please refer to the works:
+
+R. S. Medeiros, J. Scharcanski and A. Wong, "Multi-scale stochastic color 
+texture models for skin region segmentation and gesture detection," 2013 
+IEEE International Conference on Multimedia and Expo Workshops (ICMEW).
